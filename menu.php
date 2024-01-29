@@ -32,7 +32,7 @@ if (!isset($_SESSION['loggedin'])) {
             <a href="#" onclick="salir();" class="w3-bar-item w3-button"><span class="material-simbols-outline">❌</span>Salir</a>
         </div>
         <div id="info" style="text-align: center;">
-            <h1>Informacion del sistema</h1>
+            <h1>Informacion del sistema BraytoGBDX</h1>
         </div>
         <div class="main">
             <!-- <h2>Bienvenido a mi primera conexion con PHP</h2> -->
