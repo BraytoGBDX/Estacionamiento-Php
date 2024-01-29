@@ -1,0 +1,40 @@
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(136, 199, 250);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+.sidenav a:hover {
+    color: rgb(0, 35, 235);
+}
+
+.main {
+    margin-left: 220px;
+    padding: 16px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .sidenav {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
