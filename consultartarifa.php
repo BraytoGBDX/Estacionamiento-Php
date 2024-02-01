@@ -4,6 +4,8 @@
             <tr>
                 <th scope="col">Tarifa</th>
                 <th scope="col">Monto</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
             </tr>
         </thead>
         <tbody>

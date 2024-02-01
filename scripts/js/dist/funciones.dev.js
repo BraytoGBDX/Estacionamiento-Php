@@ -48,6 +48,8 @@ function registrarCajon() {
 
     $("#numeroCajon").val("");
     $("#status").val("");
+    cargarDiv($("#result"),"consultarcajon.php")
+
   });
 }
 
@@ -167,12 +169,3 @@ function registrarRegistro() {
   });
 }
 
-function eliminarCajon(id_cajon){
-  $.post("eliminarcajon.php",{
-  "id_cajon":id_cajon
-  },
-  function(result){
-  alert(result)
-  })
-  }
-  

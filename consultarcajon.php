@@ -4,6 +4,8 @@
             <tr>
                 <th scope="col">Número</th>
                 <th scope="col">Estatus</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
             </tr>
         </thead>
         <tbody>
@@ -17,8 +19,8 @@
                 <td>".$result['numero']."</td>
                 <td>".$result['status']."</td>
 
-                <td><a href='' onclick='editarCajon(".$result['id_cajon'].");'>Editar</a></td>
-                <td><a href='' onclick='eliminarcajon(".$result['id_cajon'].");'>Eliminar</a></td>
+                <td><a href='#' onclick='editarcajon(".$result['id_cajon'].");'>Editar</a></td>
+                <td><a href='#' onclick='eliminarcajon(".$result['id_cajon'].");'>Eliminar</a></td>
                 </tr>";
             }
             ?>

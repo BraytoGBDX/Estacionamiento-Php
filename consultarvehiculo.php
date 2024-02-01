@@ -6,6 +6,8 @@
                 <th scope="col">Modelo</th>
                 <th scope="col">Tipo</th>
                 <th scope="col">Cliente</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
             </tr>
         </thead>
         <tbody>

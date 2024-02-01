@@ -22,8 +22,8 @@
                 <td>".$result['direccion']."</td>
                 <td>".$result['telefono']."</td>
                 <td>".$result['correo']."</td>
-                <td><a href='' onclick='editarcliente(".$result['id_cliente'].");'>Editar</a></td>
-                <td><a href='' onclick='eliminarcliente(".$result['id_cliente'].");'>Eliminar</a></td>
+                <td><a href='#' onclick='editarcliente(".$result['id_cliente'].");'>Editar</a></td>
+                <td><a href='#' onclick='eliminarcliente(".$result['id_cliente'].");'>Eliminar</a></td>
                 </tr>";
             }
             ?>

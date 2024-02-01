@@ -23,6 +23,7 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="sidenav">
             <a href="#">Inicio</a>
             <a href="#" onclick="cargarDiv('#contenido' ,'registrar.php');">Registro</a>
+            <a href="#" onclick="cargarDiv('#contenido' ,'inicio.php');">Dashboard</a>
             <a href="#" onclick="cargarDiv('#contenido','cajones.php')">Cajones</a>
             <a href="#" onclick="cargarDiv('#contenido','clientes.php')">Clientes</a>
             <a href="#" onclick="cargarDiv('#contenido','vehiculos.php')">Vehiculos</a>

@@ -1,6 +1,6 @@
-function cargarDiv(div,url){
+function cargarDiv(div, url) {
     $(div).load(url);
-}
+  }
 
 function salir(){
     alert("Salir del sistema");
@@ -24,7 +24,10 @@ function registrarCliente() {
             $("#direccion").val("");
             $("#telefono").val("");
             $("#correo").val("");
+            cargarDiv($("#result"),"consultarcliente.php")
+
         });
+
     
 }
 
@@ -47,6 +50,7 @@ function registrarCajon() {
         // Limpiar los campos después de registrar
         $("#numeroCajon").val("");
         $("#status").val("");
+        
     });
 }
 
@@ -229,4 +233,66 @@ function eliminarvechiculo(id_vehiculo){
         alert(result)
     })
     cargarDiv($("#result"),"consultarvehiculo.php")
+}
+
+function editarcliente(id_cliente){
+    $.post("editarcliente.php",{
+        "id_cliente":id_cliente
+    },
+    function(respuesta){
+        contenido.innerHTML=respuesta;
+
+    })
+}
+
+function modificarCliente(id_cliente) {
+    var nombre = $("#nombre").val();
+    var direccion = $("#direccion").val();
+    var correo = $("#correo").val();
+    var telefono = $("#telefono").val();
+
+    $.post("actualizarcliente.php", {
+            "id_cliente":id_cliente,
+            "nombre": nombre,
+            "direccion": direccion,
+            "correo": correo,
+            "telefono": telefono
+        },function(result){
+            alert(result);
+            $("#nombre").val("");
+            $("#direccion").val("");
+            $("#telefono").val("");
+            $("#correo").val("");
+            cargarDiv($("#result"),"cliente.php")
+
+
+        });
+}
+
+function editarcajon(id_cajon){
+    $.post("editarcajon.php",{
+        "id_cajon":id_cajon
+    },
+    function(respuesta){
+        contenido.innerHTML=respuesta;
+
+    })
+}
+
+function modificarCajon(id_cajon) {
+    var numeroCajon = $("#numeroCajon").val();
+    var status = $("#status").val();
+
+    $.post("actualizarcajon.php", {
+            "id_cajon":id_cajon,
+            "numeroCajon": numeroCajon,
+            "status": status
+        },function(result){
+            alert(result);
+            $("#numeroCajon").val("");
+            $("#status").val("");
+            cargarDiv($("#result"),"cajon.php")
+
+
+        });
 }

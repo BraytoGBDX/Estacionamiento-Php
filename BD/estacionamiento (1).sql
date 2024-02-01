@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-01-2024 a las 05:59:02
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.1.25
+-- Tiempo de generación: 31-01-2024 a las 05:29:08
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bd_estacionamiento`
+-- Base de datos: `estacionamiento`
 --
 
 -- --------------------------------------------------------
@@ -38,7 +38,9 @@ CREATE TABLE `cajon` (
 --
 
 INSERT INTO `cajon` (`id_cajon`, `numero`, `status`) VALUES
-(5, 1, 'Libre');
+(5, 1, 'Libre'),
+(14, 23, 'Libre'),
+(15, 45, 'Libre');
 
 -- --------------------------------------------------------
 
@@ -59,7 +61,8 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id_cliente`, `nombre`, `direccion`, `correo`, `telefono`) VALUES
-(1, 'jareni', 'chicontla#100', 'jareni@hotmail.com', '543623123');
+(1, 'Irving', 'Saragoza#100', 'jazziel@hotmail.com', '1231231231'),
+(11, 'Brayan Robertiño', 'av. universidad tecnologica 1000', 'efe@pepo.com', '123');
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,7 @@ CREATE TABLE `encargado` (
 --
 
 INSERT INTO `encargado` (`id_encargado`, `nombre`, `direccion`, `telefono`, `correo`, `usuario`, `contrasena`) VALUES
-(1, 'Griselda Cabrera Franco', 'solidaridad#114', '764101429', 'gris@gmail.com', 'Griselda', '12345');
+(1, 'Brayan Roberto Garcia Bernabe', 'Aquiles Serdán #46', '7296863079', 'okumurar567@gmail.com', 'Brayto', 'okumura rin23');
 
 -- --------------------------------------------------------
 
@@ -126,7 +129,7 @@ CREATE TABLE `tarifa` (
 
 INSERT INTO `tarifa` (`id_tarifa`, `tarifa`, `monto`) VALUES
 (1, 'Familiar', 0),
-(2, 'Amigo', 10);
+(4, 'Amigo', 34);
 
 -- --------------------------------------------------------
 
@@ -201,37 +204,37 @@ ALTER TABLE `vehiculos`
 -- AUTO_INCREMENT de la tabla `cajon`
 --
 ALTER TABLE `cajon`
-  MODIFY `id_cajon` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_cajon` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_cliente` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `encargado`
 --
 ALTER TABLE `encargado`
-  MODIFY `id_encargado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_encargado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
 ALTER TABLE `registro`
-  MODIFY `id_registro` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_registro` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tarifa`
 --
 ALTER TABLE `tarifa`
-  MODIFY `id_tarifa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_tarifa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `vehiculos`
 --
 ALTER TABLE `vehiculos`
-  MODIFY `id_vehiculo` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_vehiculo` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
